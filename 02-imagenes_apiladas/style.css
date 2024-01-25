@@ -1,0 +1,82 @@
+body{
+    font-family: sans-serif;
+    background-color: aquamarine;
+}
+
+.img-container{
+    /* margin: 100px auto; */
+    /* width: 500px; */
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.img-container .img{
+    position: relative;
+    margin-right: -20px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.img-container .img img{
+    width: 250px;
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-container .img .name{
+    position: absolute;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    top: -40px;
+    /* left: calc(-50% - 30px); */
+    padding: 10px 15px;
+}
+
+.img-container .img .name .text{
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin:  0 auto;
+    width: 150px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.img-container .img:hover .name{
+    display: inline-block;
+    transform: translateY(-20px);
+}
+
+.img-container .img .name::before{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 1px;
+    left: 40%;
+    bottom: -15%;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+}
+
+/* realizamos la creacion de un efecto de movimiento cada vez que se pase el click por la imagen */
+.img-container .img:hover img{
+   transform: translateY(-20px);
+}
+
+@media(max-width: 1176px){
+    .img-container{
+        flex-direction: column;
+        height: 300vh;
+        
+    }
+}

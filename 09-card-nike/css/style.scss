@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #161623;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container {
+    position: relative;
+
+    .card {
+        background-color: rgb(29, 29, 29);
+        width: 320px;
+        height: 450px;
+        position: relative; //cuando ingresamos una posicion relativa, todo depende de la posicion del padre
+        border-radius: 20px;
+        overflow: hidden;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: o;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: aqua;
+            clip-path: circle(150px at 80% 20%);
+            transition: 0.5s ease-in-out;
+        }
+
+        &:hover{
+            .imgBx{
+                top: 0;
+                transform: translateY(0);
+
+            }
+
+            .content{
+                height: 210px;
+
+                .size{
+                    opacity: 1;
+                    visibility: visible;
+                    transition-delay: 0.5s;
+                }
+                .color{
+                    opacity: 1;
+                    visibility: visible;
+                    transition-delay: 0.6s;
+                }
+
+                a{
+                    opacity: 1;
+                    transform: translateY(0px);
+                    transition-delay: 0.7s;
+                }
+
+            }
+
+            &::before{
+                clip-path: circle(300px at 80% -20%);
+            }
+        }
+
+        
+
+        .imgBx {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 220px;
+            z-index: 1000; //el z-index nos sirve para que este superpuesta a cualquier elemento
+            transform: translateY(-50%);
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 340px;
+                transform: translate(-50%, -50%) rotate(-10deg);
+            }
+        }
+
+        .content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            transition: 1s;
+            h2{
+                font-weight: 600;
+                letter-spacing: 1px;
+                color: white;
+            }
+
+            .size, .color{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 20px;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.05;
+
+                //el primer h3 pertenece al size y el segundo pertenece al color
+                h3, h3{
+                    color: white;
+                    font-weight: 300;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-right: 10px;
+                }
+            }
+
+            .size  span{
+                width: 26px;
+                height: 26px;
+                text-align: center;
+                line-height: 24px;
+                display: inline-block;
+                color: #111;
+                background: #fff;
+                border-radius: 4px;
+                margin: 0 5px;
+                transition: 0.5s;
+                cursor: pointer;
+
+                &:hover{
+                    color: #111;
+                    background: #dc7928;
+                }
+            }
+
+            .color span{
+                width: 20px;
+                height: 20px;
+                background: red;
+                margin: 0 5px;
+                border-radius: 50%;
+                cursor: pointer;
+                &:nth-child(2){
+                    background: greenyellow ;
+                }
+                &:nth-child(3){
+                    background:gray ;
+                }
+                &:nth-child(4){
+                    background: black ;
+                }
+                &:nth-child(5){
+                    background: red;
+                }
+            }
+
+            a{
+                display: inline-block;
+                padding: 10px 30px;
+                background: #b6fcfd;
+                border-radius: 4px;
+                margin-top: 10px;
+                text-decoration: none;
+                font-weight: 600;
+                color: #131313;
+                transform: translateY(50px);
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+        }
+    }
+}

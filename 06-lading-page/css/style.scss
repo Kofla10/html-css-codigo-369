@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main{
+    position: relative;
+    min-height: 100vh;
+    background: radial-gradient(#f0483a, #d10a30);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 100px;
+
+    header{
+
+        position: absolute;
+        min-width: 100vw;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000; //read about z-index
+
+        .logo{
+            max-width: 90px;
+        }
+        .navigation{
+            display: flex;
+            // gap: 10px;
+            // justify-content: end;
+            // align-items: flex-end;
+
+            li{
+                list-style: none; //quita los puntos de la lista
+
+                a{
+                    position: relative;
+                    color: #fff;
+                    text-decoration: none;
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+
+    .content{
+        padding-top: 50px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .text{
+            width: 100%;
+            max-width: 600px;
+            &-h2{
+                color: #fff;
+                font-size: 5em;
+                font-weight: 300;
+                line-height: 1.1em; //para controlar el salto de linea
+                margin: 20px 0;
+
+                span{
+                    // font-size: 5em;
+                    font-weight: 700;
+                }
+            }
+
+            p{
+                color: white;
+                font-weight: 400;
+                font-size: 1.1em;
+                line-height: 1.5em;
+                margin: 20px 0;
+
+            }
+
+            .btn{
+                position: relative;
+                display: inline-block;
+                padding: 20px 50px;
+                background: #fff;
+                color: #333;
+                border: 1px solid rgb(88, 84, 84);
+                border-radius: 35px;
+                margin-top: 10px;
+                box-shadow: 2px 5px 10px rgb(94, 71, 71);
+                font-size: 1.1em;
+                font-weight: 40px;
+                text-decoration: none;
+                transition: 0.25s;
+
+                &:hover{
+                    letter-spacing: 1px; //Nos sirve para serparar la cantidad de px en cada una de las letras
+                    color: rgb(48, 27, 27);
+                    background-color: rgb(241, 218, 218);
+
+                }
+            }
+        }
+
+        &-img{
+            position: relative;
+
+            &-sub{
+                &-potato{
+                    display: block;
+                    img{
+                        width: 100%;
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .footer{
+        margin-top: 40px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        padding: 30px 100px;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .sci{
+            display: flex;
+
+            li{
+                list-style: none;
+
+                a{
+                    margin-right: 20px;
+                    color: #fff;
+                    font-size: 1em;
+                    display: inline-block;
+                    transition: 0.25s;
+
+                    &:hover{
+                        color: #333;
+                        transform: translateY(-10px); //para crear una animacion de desplazamiento
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .main {
+      padding: 20px;
+      .content {
+        .text {
+          h2 { 
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  
+    .footer {
+      flex-direction: row-reverse;
+      align-items: center;
+      .sci {
+        margin-top: 40px;
+        margin-right: -80px;
+      }
+    }
+  }

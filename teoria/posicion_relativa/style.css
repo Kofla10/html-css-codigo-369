@@ -1,0 +1,17 @@
+body{
+    background: black;
+}
+.father{
+    background: red;
+    height: 200px;
+    width: 200px;
+    position: fixed; /*agregamos una posicion fija, es util para cuando se requiere agrega un boton de whatsapp que quede fijo en alguna parte de la pantalla*/
+    right: 0;
+    bottom: 0;
+}
+
+.son{
+    background: royalblue;
+    height: 300px;
+    width: 300px;
+}

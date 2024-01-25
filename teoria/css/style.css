@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: black;
+}
+
+.container{
+    background: #202020;
+    display: flex; /*para que los elementos del container sean flexibles*/
+    /* flex-direction: row; this is default */
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh; /*se adapta a la altura que tenga la pantalla*/
+    flex-wrap: wrap;
+    gap: 50px; /*para realizar un separado cuando se modifique el tamaño de la pantalla*/
+}
+
+.one {
+    background: #f13929;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.two {
+    background: #7250ff;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+
+.three {
+    background: #01d0fb;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+
