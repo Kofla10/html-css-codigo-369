@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden; //si hay desbordamiento que se oculte
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; //que el tamaño minimo sea el 100% de la pantalla
+    background: linear-gradient(to top, #f1f4f9, #dff1ff); //realizamos el color degraciante con el to le damos donde quiere que sea el degradiante ejemplo se usa to top en la parte de arriba, to bottom en la parte de abajo etc
+    background-size: cover;
+    background-position: center;
+
+    .color{
+        position: absolute;
+        filter: blur(150px); //aplicar efectos graficos en este caso un difuminado
+
+        &:nth-child(1){ //con esta accedemos al hijo #1
+            top: -350px;
+            background: #5c55e6;
+            width: 600px;
+            height: 600px;
+        }
+
+        &:nth-child(2){
+            bottom: -150px;
+            left: 100px;
+            background: #4b1c8b;
+            width: 500px;
+            height: 500px;
+
+        }
+
+        &:nth-child(3){
+            bottom: 50px;
+            right: 0;
+            background: #001f6a;
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .box{
+        .cuadrado{
+            content: "";
+            position: absolute;
+        }
+    }
+
+}
