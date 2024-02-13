@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 100px 0;
+    background: linear-gradient(to bottom, #d509a0, #ff606e);
+
+    header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 40px 100px;
+        width: 100%;
+        justify-content:  space-between;
+        align-items: center;
+        display: flex;
+
+        .logo{
+            max-width: 100px;
+        }
+
+        .toggle{
+            width: 30px;
+            height: 30px;
+            // background: url();
+            background-size: 30px;
+            cursor: pointer;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .content{
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+
+        .imgBx{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+            img{
+                max-width: 100%;
+                animation: animationShoe 3.3s linear infinite;
+            }
+        }
+
+        .text{
+            max-width: 700px;
+            margin-top: 20px;
+
+            h2{
+                color: #fff;
+                font-size: 2.5em;
+                font-weight: 800;
+                text-transform: uppercase;// convertir el texto a mayuscula
+            }
+
+            p{
+                color: #fff;
+            }
+
+            a{
+                display: inline-block;
+                padding: 10px 30px;
+                color: #111;
+                background: #fff;
+                font-weight: 500;
+                letter-spacing: 2px;
+                text-decoration: none;
+                border-radius: 5px;
+                // border: none;
+                box-shadow: 2px 3px 5px rgb(179, 110, 182);
+                margin-top: 15px;
+            }
+        }
+
+
+
+    }
+}
+
+@media(max-width: 600px){
+    header{
+        padding: 20px 40px;
+    }
+
+    section{
+        padding: 40px 40px 0;
+        overflow: hidden;
+    }
+}
+
+@keyframes animationShoe {
+    // 0%{
+    //     transform: translateY(-20px);
+    // }
+
+    // 100%{
+    //     transform: translateY(20px);
+    // }
+}
