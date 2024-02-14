@@ -63,6 +63,7 @@ section{
                 font-size: 2.5em;
                 font-weight: 800;
                 text-transform: uppercase;// convertir el texto a mayuscula
+                text-decoration: none; // Se quitan las decoracion
             }
 
             p{
@@ -87,6 +88,43 @@ section{
 
 
     }
+
+    &:before{
+        content: 'ZOOMX';
+        font-size: 20vw;
+        position: absolute;
+        color: #0001;
+        display: flex;
+        font-weight: 900;
+        padding-top: 13vh;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .sci{
+        margin-top: 10px;
+        position: absolute;
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        // flex-direction: spac;
+        li{
+            list-style: none;           
+
+            a{
+                color: white;
+                font-size: 20px;
+
+                &:hover{
+                    transform: scale(1.5);
+                    transition: 0.6s;
+                }
+            }
+        }
+
+       
+    }
 }
 
 @media(max-width: 600px){
@@ -101,11 +139,11 @@ section{
 }
 
 @keyframes animationShoe {
-    // 0%{
-    //     transform: translateY(-20px);
-    // }
-
-    // 100%{
-    //     transform: translateY(20px);
-    // }
+    0%, 100%{
+        transform: translateY(20px);
+    }
+    
+    50%{
+        transform: translateY(-20px);
+    }
 }
