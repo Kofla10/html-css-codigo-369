@@ -5,6 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+
+    scroll-behavior: smooth;
+
+
 }
 body{
     background: #111;
@@ -57,15 +61,6 @@ main{
             background: linear-gradient(to top, #111, transparent);
 
         }
-        .fitBg{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            object-fit: cover;
-            opacity: 0.8;
-
-        }
         
         .content{
             position: relative;
@@ -91,6 +86,7 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 20px;
 
         .contentBx{
             min-width: 50%;
@@ -98,34 +94,11 @@ main{
             text-align: end;
             padding-right: 40px;
 
-            .titleText{
-                font-weight: 600;
-                color: white;
-                text-transform: capitalize;
-                font-size: 2em;
-                margin-bottom: 10px;
-            }
             p{
               color: white;
               font-size: 1em;
             }
 
-            .imgBx{
-                position: relative;
-                min-width: 500%;
-                width: 50%;
-                min-height: 500px;
-
-                img{
-                    border-radius: 15px;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
         }
     }
 
@@ -136,6 +109,12 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-left: 15px;
+        
+        .fitBg{
+            border-radius: 20px;
+        }
+        
         &::before{
             content: "";
             position: absolute;
@@ -156,16 +135,18 @@ main{
             height: 400px;
             z-index: 1000;
         }
+        
     }
 
     .destination{
         text-align: center;
+        
         .content{
             text-align: center;
         }
 
         .destinationList{
-            position: relative;
+            position: relative; //se pone position relativa, cuando tiene hijos, queda como un padre
             display: flex;
             justify-content: center;
             align-items: center;
@@ -186,6 +167,37 @@ main{
                transition: 0.5s;
                margin: 10px;
                overflow: hidden;
+               border-radius: 15px;
+
+               &:hover{
+                opacity: 1;
+               }
+
+               .imgBx{
+                position: relative;
+                width: 100%;
+                height: 400px;
+               }
+
+               .content{
+                width: 100%;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h3{
+                    // color: rgb(0, 0, 0);
+                    color: white;
+                    z-index: 1;
+                    line-height: 1.2em;
+                    span{
+                        font-size: 0.8em;
+                        font-weight: 300;
+                        opacity: 0.5;
+                    }
+
+                }
+               }
             }
         }
     }
@@ -219,23 +231,200 @@ main{
             background: linear-gradient(to bottom, #111, transparent);
         }
     }
+
+    .footer{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .sci{
+
+            position: relative;
+            display: flex;
+            
+            li{
+                list-style: none;
+                a{
+                    margin: 0 20px;
+                    text-decoration: none;
+
+                    img{
+                        filter: invert(1); //invierte los colores
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
+
+        .copyright{
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
 }
 
-
 a.btn{
-        position: relative;
-        display: inline-block;
-        margin-top: 20px;
-        background: #fff;
-        color: #333;
-        text-decoration: none;
-        padding: 10px 30px;
-        border-radius: 10px;
-        font-weight: 600;
-        box-shadow: 3px 5px 10px rgba(155, 148, 148, 0.4);
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 3px 5px 10px rgba(155, 148, 148, 0.4);
 
-        &:hover{
-            box-shadow: 3px 5px 15px rgba(105, 130, 185, 0.4);
+    &:hover{
+        box-shadow: 3px 5px 15px rgba(105, 130, 185, 0.4);
+    }
+}
+
+.titleText{
+    font-weight: 600;
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.text{
+    color: #fff;
+    font-size: 1em;
+}
+
+.imgBx{
+    position:relative;
+    min-width: 50%;
+    width: 50%;
+    min-height: 500px;
+    img{
+        border-radius: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.fitBg{
+    position: absolute;
+      //cuando se el pone una posicion absoluta, toca posicionar el elemento, en este caso se hace en cero
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+
+}
+
+@media(max-width: 600px){
+    main{
+        section{
+            padding: 400px;
+        }
+
+        .banner{
+            .content{
+                h2{
+                    font-size: 2.5em;
+                }
+                p{
+                    font-size: 1em;
+                }
+            }
+        }
+
+        .about{
+
+            flex-direction: column;
+
+            .contentBx{
+                min-width: 100%;
+                width: 100%;
+                text-align: center;
+                padding-right: 0px;
+
+                .imgBx{
+                    min-width: 100%;
+                    width: 100%;
+                    text-align: center;
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+
+    .imgBx{
+        min-height: 250px;
+    }
+
+    .titleText{
+        font-size: 1.5em;
+    } 
+
+    a.btn{
+        margin-bottom: 30px;
+        
+    }
+
+    .destinationList{
+        .box{
+            position: relative;
+            max-width: 350px;
+            width: 100%;
+            height: 400px;
+            min-width: initial;
+            
+            .imgBx{
+                height: 320px;
+            }
+        }
+    }
+
+    .footer{
+        .sci{            
+            li{
+                a{
+                    img{
+                        // filter: invert(1);
+                        max-width: 30px;
+                    }
+                }
+            }
+        }
+
+        .copyright{
+            a{
+            }
         }
 
     }
+}
+
+//modificaciones de scroll
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgba(10, 10, 10, 0.685);
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(63, 74, 82);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(48, 112, 158);
+}
