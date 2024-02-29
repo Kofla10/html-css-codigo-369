@@ -16,18 +16,88 @@ body{
 }
 
 
-.container{    
+.container{
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction:  column;
     flex-wrap: wrap;
     gap: 20px;
     margin: 30px 0;
 
     .serviceBox{
         position: relative;
+        width: 350px;
+        height: 280px;
+        border-radius: 20px;
+        background: #51446e;
+        overflow: hidden;
+
+        .icon{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--i); //toma el color de las variables que se le asignaron en el html
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            transition-delay: 0.25s;
+
+            ion-icon{
+                font-size: 5em;
+                color: white;
+                transition: 0.5s;
+                transition-delay: 0.25s;
+            }
+        }
+
+        &:hover{
+
+            .icon{
+                top: 30px;
+                left:calc(50% - 40px); //lo corre hacia la derecha la mitad pero lo corre 40px hacia la izquirda, le resta
+                height: 80px;
+                width: 80px;
+                border-radius: 50%;
+                transition-delay: 0s;
+                ion-icon{
+                    font-size: 2em;
+                    transition-delay: 0s;
+                }
+            }
+
+            .content{
+                transform: scale(1); //para poder mostrar el content
+                transition-delay: 0.25s;
+            }
+        }
+
+        .content{
+            position: relative;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            margin-top: 100px;
+            z-index: 1;
+            transform: scale(0);
+            transition: 0.5s;
+
+            h2{
+                margin-top: 10px;
+                margin-bottom: 5px;
+                letter-spacing: 1px;
+            }
+
+            p{
+                font-weight: 300;
+                line-height: 1.5em;
+                overflow: auto;
+            }
+        }
     }
 }
