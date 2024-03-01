@@ -4,4 +4,45 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #ebf4ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container .card {
+  position: relative;
+  background: rgba(163, 167, 175, 0.6901960784);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 300px;
+  overflow: hidden;
+}
+.container .card-sub {
+  width: 90%;
+  height: 90%;
+  margin: 10px;
+  border-radius: 15px;
+  background: #ebf4ff;
+  box-shadow: 0px 10px 15px rgba(255, 255, 255, 0.5019607843);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
