@@ -3,3 +3,7 @@ pagina para logos: https://ionic.io/ionicons
 github: https://github.com/Franklin369/cursohtmlcss
 
 react: github.com/Franklin369/reactintensivo/tree/main
+
+
+uso de la letra poppins: 
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap";
