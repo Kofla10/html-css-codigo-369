@@ -86,6 +86,7 @@ body .container .card .content .sub-content h2 {
   letter-spacing: 1px;
   backface-visibility: hidden;
   text-transform: uppercase;
+  text-shadow: 0 5px 10px #333;
 }
 body .container .card .content .sub-content p {
   font-size: 1em;
