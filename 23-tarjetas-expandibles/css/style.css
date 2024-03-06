@@ -30,6 +30,7 @@ body .container .tab {
   box-shadow: 0 15px 15px 25px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   overflow: hidden;
+  padding: 10px 20px;
 }
 body .container .tab input {
   -webkit-appearance: none;
@@ -38,14 +39,15 @@ body .container .tab input {
 }
 body .container .tab input:checked ~ label::after {
   content: "+";
-  color: #fff;
-  transform: rotate(135deg);
+  color: rgba(38, 26, 201, 0.726);
+  transform: rotate(310deg);
 }
 body .container .tab input:checked ~ label h2 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   color: rgba(255, 255, 255, 0.2);
   font-size: 8em;
   justify-content: flex-end;
@@ -57,8 +59,73 @@ body .container .tab input:checked ~ label h3 {
   color: #333;
   border-radius: 2px;
   box-shadow: 0 5pc 15px rgba(0, 0, 0, 0.05);
+  border-end-end-radius: 20px;
+  box-shadow: rgba(117, 117, 117, 0.637);
 }
 body .container .tab input:checked ~ .content {
   max-height: 100vh;
   transition: 1s;
+}
+body .container .tab input:checked ~ .content p {
+  width: 100%;
+  color: #fff;
+}
+body .container .tab label {
+  display: inline-block;
+  display: flex;
+  margin-bottom: 0px;
+  align-items: center;
+  cursor: pointer;
+}
+body .container .tab label::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.1);
+  transition: transform 1s;
+  text-shadow: 0 5px 10px rgba(148, 144, 144, 0.295);
+}
+body .container .tab label h2 {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.25em;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+body .container .tab label h3 {
+  position: relative;
+  font-weight: 500;
+  color: #333;
+  z-index: 10;
+}
+body .container .tab:hover label::after {
+  color: #333;
+}
+body .container .tab .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+body .container .tab .content p {
+  position: relative;
+  padding: 10px 0;
+  color: #333;
+  z-index: 10;
+}
+body .container .tab:nth-child(2) label h2 {
+  background: linear-gradient(135deg, #70f570 10%, #49c626 100%);
+}
+body .container .tab:nth-child(3) label h2 {
+  background: linear-gradient(135deg, #3c8ce7 10%, #00eaff 100%);
+}
+body .container .tab:nth-child(4) label h2 {
+  background: linear-gradient(135deg, #e7d63c 10%, #e9ad07 100%);
+}
+body .container .tab:nth-child(5) label h2 {
+  background: linear-gradient(135deg, #e73ca5 10%, #fa2150 100%);
 }/*# sourceMappingURL=style.css.map */
