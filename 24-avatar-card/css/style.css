@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+body {
+  /*asignar un fondo*/
+  /* background: url(../img/f3.jpg) no-repeat center fixed; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /*Para realizarle un degradiante al fondo*/
+}
+body::before {
+  content: "";
+  position: absolute;
+  /*Realizamos un desplazo hacia abajo de 200px*/
+  bottom: -200px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(32, 8, 60) 20%, transparent);
+  transition: 0.5s;
+  z-index: 1;
+}
+body .card {
+  z-index: 100;
+  width: 300px;
+  height: 460px;
+  border-radius: 20px;
+  background: #000;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  position: absolute;
+  /*con esto logramos centrar*/
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+body .card .poster {
+  position: relative;
+  overflow: hidden;
+  /*Creamos un decorador tipo sombra*/
+}
+body .card .poster::before {
+  content: "";
+  position: absolute;
+  bottom: -250px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 70%, transparent);
+  /*se aplica el trasition por lo que va a tener un hover*/
+  transition: 0.5s;
+  z-index: 1;
+}
+body .card .poster img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+body .card .detail {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  height: 92%;
+  bottom: -220px;
+  left: 0;
+  transition: 0.5s;
+  z-index: 2;
+}
+body .card .detail .imgcontent {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: start;
+}
+body .card .detail .imgcontent img {
+  width: 70%;
+}
+body .card .detail .imgcontent span {
+  font-size: 14px;
+  color: rgb(253, 253, 253);
+}
+body .card .detail .rating {
+  position: relative;
+  color: yellow;
+  padding: 5px 0;
+  font-size: 16px;
+}
+body .card .detail .rating span {
+  color: white;
+  padding: 0 5px;
+}
+body .card .detail .tags {
+  position: relative;
+  margin-top: 5px;
+}
+body .card .detail .tags span {
+  padding: 2px 5px;
+  color: #fff;
+  display: inline-block;
+  border-radius: 4px;
+}
+body .card .detail .tags .fantasy {
+  background: rgb(114, 49, 243);
+}
+body .card .detail .tags .mystery {
+  background: rgb(242, 7, 132);
+}
+body .card .detail .info {
+  color: #fff;
+}
+body .card .detail .info p {
+  margin: 15px 0 10px;
+}
+body .card .cast {
+  position: relative;
+}
+body .card .cast h4 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+body .card .cast ul {
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+}
+body .card .cast ul li {
+  list-style: none;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 6px;
+  border: 2px solid #fff;
+}
+body .card .cast ul li img {
+  width: 100%;
+}
+body .card:hover {
+  box-shadow: 0 0 50px #273234;
+}
+body .card:hover .poster {
+  /*aplicar un difuminado a la imagen*/
+}
+body .card:hover .poster::before {
+  bottom: 0;
+}
+body .card:hover .poster img {
+  filter: blur(5px);
+  /*hacemos que se desplace para arriba*/
+  transform: translateY(-60px);
+}
+body .card:hover .detail {
+  bottom: 0;
+  /* transform: translateY(-220px);*/
+}/*# sourceMappingURL=style.css.map */
