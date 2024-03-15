@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+body{
+    
+
+    .container{
+        height: 100vh;
+        width: 100vw;
+        color: #fff;
+        background: #000;
+        font-size: 30px;
+        font-weight: 1000;
+        display: grid;
+        // grid-template-columns: 20% 50% 30%; //realizar el calculo por porcentaje
+        // grid-template-columns: 1fr 1fr 1fr; //realizar el calculo por fracciones
+        // grid-template-columns: repeat(5, 1fr);
+        // grid-template-rows: repeat(5, 1fr);
+        // gap: 10px;
+        grid-template-areas: 
+        "a1 a1 a2 a2"
+        "a1 a1 a2 a2"
+        "a3 a3 a2 a2"
+        "a3 a3 a2 a2"
+        "a4 a4 a4 a4";
+
+        section{
+            // width: 100px;
+            // height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .caja1{
+            background: gray;
+            grid-area: a1;
+        }
+
+        .caja2{
+            background: red;
+            grid-area: a2;
+        }
+
+        .caja3{
+            background: blue;
+            grid-area: a3;
+        }
+
+        .caja4{
+            background: blueviolet;
+            grid-area: a4; 
+        }
+
+        // .caja5{
+        //     background: orange;
+        // }
+
+        // .caja6{
+        //     background: green;
+        // }
+
+    }
+}
