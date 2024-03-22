@@ -18,9 +18,10 @@ body .container section {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
 }
 body .container .caja1 {
-  background: gray;
+  background: yellow;
   grid-area: a1;
 }
 body .container .caja2 {

@@ -34,10 +34,19 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
+            color: black;
         }
 
+        // .caja1, .caja2, .caja3, .caja4{
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     height: 100%;
+        //     color: black;
+        // }
+
         .caja1{
-            background: gray;
+            background: yellow;
             grid-area: a1;
         }
 
